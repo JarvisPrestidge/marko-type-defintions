@@ -1,0 +1,28 @@
+{
+    "name": "marko-type-defintions",
+    "version": "1.0.0",
+    "description": "Modern Marko js type defintions",
+    "author": "Jarvis Prestidge <jarvis@truelayer.com>",
+    "license": "MIT",
+    "keywords": [
+        "marko",
+        "component",
+        "typescript",
+        "type",
+        "definitions"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "repository": {
+        "url": "git@github.com:JarvisPrestidge/marko-type-defintions.git",
+        "type": "git"
+    },
+    "homepage": "https://github.com/JarvisPrestidge/marko-type-defintions",
+    "bugs": {
+        "url": "https://github.com/JarvisPrestidge/marko-type-defintions/issues"
+    },
+    "dependencies": {
+        "@types/node": "^10.12.18"
+    }
+}
