@@ -1,6 +1,6 @@
 {
-    "name": "marko-type-defintions",
-    "version": "1.0.0",
+    "name": "marko-type-definitions",
+    "version": "1.0.3",
     "description": "Modern Marko js type defintions",
     "author": "Jarvis Prestidge <jarvis@truelayer.com>",
     "license": "MIT",
@@ -11,6 +11,7 @@
         "type",
         "definitions"
     ],
+    "types": "index.d.ts",
     "files": [
         "index.d.ts"
     ],

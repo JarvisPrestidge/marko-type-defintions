@@ -1,6 +1,4 @@
-import { EventEmitter } from "events";
-
-declare namespace Marko {
+declare module "marko" {
 
     interface DomElement {
 
@@ -60,6 +58,8 @@ declare namespace Marko {
          */
         replaceChildrenOf(targetEl: string | Node): this;
     }
+
+    import { EventEmitter } from "events";
 
     /**
      * Represents a marko component
@@ -290,8 +290,8 @@ declare namespace Marko {
     }
 
     // Declaration Merging - Interface
-    interface Component<S, I> extends IMarkoComponent<S, I>, DomElement {}
+    interface MarkoComponent<S, I> extends IMarkoComponent<S, I>, DomElement {}
 
     // Declaration Merging - Class
-    export class Component<S = Record<string, any>, I = Record<string, any>> {}
+    export class MarkoComponent<S = Record<string, any>, I = Record<string, any>> {}
 }
