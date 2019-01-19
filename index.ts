@@ -1,7 +1,11 @@
-/// <reference types="node" />
-
 import { EventEmitter } from "events";
+
 interface DomElement {
+
+    // ====================
+    // COMPONENT PROPERTIES
+    // ====================
+
     /**
      * Detaches the component's root element(s) from the DOM by removing the
      * UI component's DOM elements from its parent node.
@@ -54,6 +58,7 @@ interface DomElement {
      */
     replaceChildrenOf(targetEl: string | Node): this;
 }
+
 /**
  * Represents a marko component
  *
@@ -102,6 +107,11 @@ interface IMarkoComponent<S, I> extends EventEmitter {
      * @type {I}
      */
     input: I;
+
+    // ===========================
+    // COMPONENT LIFECYCLE METHODS
+    // ===========================
+
     /**
      * The create event is emitted (and onCreate is called) on component
      * creation, tpically used to set initial state for stateful components
@@ -145,6 +155,11 @@ interface IMarkoComponent<S, I> extends EventEmitter {
      * be used to do any additional clean up beyond what Marko handles itself.
      */
     onDestroy(): void;
+
+    // =========================
+    // COMPONENT GENERIC METHODS
+    // =========================
+
     /**
      * Returns a nested DOM element by prefixing the provided key with the
      * component's ID. For Marko, nested DOM elements should be assigned an
@@ -208,10 +223,7 @@ interface IMarkoComponent<S, I> extends EventEmitter {
      *
      * @param {{ removeNode?: boolean; recursive?: boolean }} {}
      */
-    destroy({}: {
-        removeNode?: boolean;
-        recursive?: boolean;
-    }): void;
+    destroy({  }: { removeNode?: boolean; recursive?: boolean }): void;
     /**
      * Rerenders the component using its renderer and either supplied input
      * or internal input and state.
@@ -273,8 +285,13 @@ interface IMarkoComponent<S, I> extends EventEmitter {
      */
     replaceState(newState: any): void;
 }
-interface MarkoComponent<S, I> extends IMarkoComponent<S, I>, DomElement {
-}
-declare class MarkoComponent<S = Record<string, any>, I = Record<string, any>> {
-}
+
+// Declaration Merging - Interface
+interface MarkoComponent<S, I> extends IMarkoComponent<S, I>, DomElement {}
+
+// Declaration Merging - Class
+class MarkoComponent<S = Record<string, any>, I = Record<string, any>> {}
+
 export { MarkoComponent };
+
+

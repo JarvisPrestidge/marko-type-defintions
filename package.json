@@ -11,9 +11,9 @@
         "type",
         "definitions"
     ],
-    "types": "index.d.ts",
+    "main": "index.js",
     "files": [
-        "index.d.ts"
+        "index.js"
     ],
     "repository": {
         "url": "git@github.com:JarvisPrestidge/marko-type-defintions.git",
@@ -24,6 +24,7 @@
         "url": "https://github.com/JarvisPrestidge/marko-type-defintions/issues"
     },
     "dependencies": {
-        "@types/node": "^10.12.18"
+        "@types/node": "^10.12.18",
+        "typescript": "^3.2.2"
     }
 }
